@@ -1,0 +1,4 @@
+- NIST — CSF 2.0 Small Business Quick-Start Guide (NIST SP 1300, 2024)
+- ISO/IEC 27005 e ISO 31000:2018 (conceitos de gestão de riscos)
+- CERT.br — Cartilha de Segurança para Internet
+- ANPD — Guia orientativo de segurança da informação para agentes de tratamento de pequeno porte (2021)
