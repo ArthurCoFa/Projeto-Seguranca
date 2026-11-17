@@ -1,0 +1,233 @@
+{
+  "modulo": "m2-riscos",
+  "versao": "0.1.0",
+  "perguntas": [
+    {
+      "id": "M2_Q01",
+      "tema": "Ameaças e controles",
+      "tipo": "escala_1_5",
+      "obrigatoria": true,
+      "pontua": false,
+      "texto": "De 1 a 5, quanto você conhece os problemas de tecnologia que podem atingir o seu negócio (golpes, vírus, perda de dados)?",
+      "ajuda": "Não existe resposta certa: queremos saber como você se sente hoje. 1 = não conheço nada; 5 = conheço bem.",
+      "opcoes": [
+        { "valor": "1", "rotulo": "1 – Não conheço" },
+        { "valor": "2", "rotulo": "2" },
+        { "valor": "3", "rotulo": "3" },
+        { "valor": "4", "rotulo": "4" },
+        { "valor": "5", "rotulo": "5 – Conheço bem" },
+        { "valor": "nao_sei", "rotulo": "Não sei dizer" }
+      ]
+    },
+    {
+      "id": "M2_Q02",
+      "tema": "Ativos e dependências",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "pontua": false,
+      "texto": "Se a internet parar, quanto tempo o negócio consegue continuar funcionando?",
+      "ajuda": "Pense em vender, receber pagamentos e atender clientes. Isso nos ajuda a medir o tamanho do prejuízo, não é nota.",
+      "opcoes": [
+        { "valor": "menos_de_1h", "rotulo": "Menos de 1 hora" },
+        { "valor": "ate_1_dia", "rotulo": "Até 1 dia" },
+        { "valor": "ate_1_semana", "rotulo": "Até 1 semana" },
+        { "valor": "mais_de_1_semana", "rotulo": "Mais de 1 semana" },
+        { "valor": "nao_sei", "rotulo": "Não sei" }
+      ]
+    },
+    {
+      "id": "M2_Q03",
+      "tema": "Ativos e dependências",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "pontua": false,
+      "condicao": { "campo": "P10_sistemas", "contem": "sistema_gestao" },
+      "texto": "Se o sistema de vendas ou de gestão sair do ar, quanto tempo o negócio aguenta sem ele?",
+      "ajuda": "É o programa onde você registra vendas, estoque ou agenda. Isso mede o tamanho do prejuízo, não é nota.",
+      "opcoes": [
+        { "valor": "menos_de_1h", "rotulo": "Menos de 1 hora" },
+        { "valor": "ate_1_dia", "rotulo": "Até 1 dia" },
+        { "valor": "ate_1_semana", "rotulo": "Até 1 semana" },
+        { "valor": "mais_de_1_semana", "rotulo": "Mais de 1 semana" },
+        { "valor": "nao_sei", "rotulo": "Não sei" }
+      ]
+    },
+    {
+      "id": "M2_Q04",
+      "tema": "Ativos e dependências",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "pontua": false,
+      "condicao": { "campo": "P09_equipamentos", "contemAlgum": ["celular_empresa", "celular_pessoal"] },
+      "texto": "Se o celular usado no trabalho quebrar ou sumir, quanto tempo o negócio aguenta sem ele?",
+      "ajuda": "Pense no WhatsApp com clientes, no aplicativo do banco e na maquininha. Isso mede o tamanho do prejuízo, não é nota.",
+      "opcoes": [
+        { "valor": "menos_de_1h", "rotulo": "Menos de 1 hora" },
+        { "valor": "ate_1_dia", "rotulo": "Até 1 dia" },
+        { "valor": "ate_1_semana", "rotulo": "Até 1 semana" },
+        { "valor": "mais_de_1_semana", "rotulo": "Mais de 1 semana" },
+        { "valor": "nao_sei", "rotulo": "Não sei" }
+      ]
+    },
+    {
+      "id": "M2_Q05",
+      "tema": "Ativos e dependências",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "Se a pessoa que mais entende de uma tarefa essencial (caixa, pedidos, sistema) ficar uma semana fora, alguém consegue fazer no lugar dela?",
+      "ajuda": "Se você trabalha sozinho, pense em você mesmo. Ter um passo a passo escrito ou outra pessoa treinada conta como \"sim\".",
+      "opcoes": [
+        { "valor": "sim", "rotulo": "Sim, outra pessoa ou um passo a passo escrito resolve", "pontos": 2 },
+        { "valor": "em_parte", "rotulo": "Só em parte, com dificuldade", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não, o negócio para", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q06",
+      "tema": "Ativos e dependências",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "condicao": { "campo": "P08_dados", "contemAlgum": ["contato", "cpf", "endereco", "saude", "financeiros"] },
+      "texto": "Os dados dos clientes (cadastro, fichas, contatos) ficam protegidos por senha e só quem precisa consegue ver?",
+      "ajuda": "Pode ser um sistema, uma planilha ou um arquivo. Papel em gaveta trancada também conta como protegido.",
+      "opcoes": [
+        { "valor": "sim", "rotulo": "Sim, com senha e só quem precisa vê", "pontos": 2 },
+        { "valor": "em_parte", "rotulo": "Têm senha, mas todos da equipe veem", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não, ficam abertos (sem senha ou à vista)", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q07",
+      "tema": "Continuidade",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "Com que frequência a internet, o sistema ou os equipamentos param ou dão problema?",
+      "ajuda": "Conte as vezes em que o problema atrapalhou o trabalho, mesmo que por pouco tempo.",
+      "opcoes": [
+        { "valor": "nunca", "rotulo": "Nunca", "pontos": 2 },
+        { "valor": "1_2_por_ano", "rotulo": "1 ou 2 vezes por ano", "pontos": 1 },
+        { "valor": "todo_mes", "rotulo": "Todo mês", "pontos": 0 },
+        { "valor": "toda_semana", "rotulo": "Toda semana", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q08",
+      "tema": "Continuidade",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "Existe uma cópia de segurança (backup) das informações importantes do negócio, guardada em outro lugar?",
+      "ajuda": "Backup é uma cópia para recuperar os dados se o aparelho quebrar, sumir ou pegar vírus. Pode ser na nuvem ou num HD externo.",
+      "opcoes": [
+        { "valor": "automatico", "rotulo": "Sim, automático, e já testamos recuperar", "pontos": 2 },
+        { "valor": "manual", "rotulo": "Sim, feito à mão de vez em quando", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q09",
+      "tema": "Continuidade",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "Se faltar energia ou internet, existe um plano B combinado para continuar vendendo?",
+      "ajuda": "Exemplos: usar a internet do celular, maquininha com chip próprio, anotar as vendas no papel.",
+      "opcoes": [
+        { "valor": "sim_todos_sabem", "rotulo": "Sim, e todos sabem o que fazer", "pontos": 2 },
+        { "valor": "so_o_dono", "rotulo": "Existe, mas só eu sei", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q10",
+      "tema": "Continuidade",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "condicao": { "campo": "P09_equipamentos", "contemAlgum": ["celular_empresa", "celular_pessoal"] },
+      "texto": "Se o celular do trabalho sumir hoje, você sabe como bloquear o aparelho e recuperar as contas (WhatsApp, e-mail, banco)?",
+      "ajuda": "Recuperar é voltar a usar as contas em outro aparelho sem perder conversas e acessos.",
+      "opcoes": [
+        { "valor": "sim", "rotulo": "Sim, sei fazer", "pontos": 2 },
+        { "valor": "em_parte", "rotulo": "Só algumas contas", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q11",
+      "tema": "Ameaças e controles",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "As contas mais importantes (e-mail, WhatsApp, redes sociais, banco) têm verificação em duas etapas?",
+      "ajuda": "É quando, além da senha, o aplicativo pede um código ou confirmação no celular. Dificulta muito a invasão da conta.",
+      "opcoes": [
+        { "valor": "todas", "rotulo": "Sim, todas", "pontos": 2 },
+        { "valor": "algumas", "rotulo": "Só algumas", "pontos": 1 },
+        { "valor": "nenhuma", "rotulo": "Nenhuma", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q12",
+      "tema": "Ameaças e controles",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "Os computadores e celulares de trabalho recebem as atualizações e têm proteção contra vírus ligada?",
+      "ajuda": "Atualização é aquele aviso para instalar a nova versão do sistema. A proteção pode ser a que já vem no aparelho.",
+      "opcoes": [
+        { "valor": "todos", "rotulo": "Sim, todos", "pontos": 2 },
+        { "valor": "alguns", "rotulo": "Só alguns", "pontos": 1 },
+        { "valor": "nenhum", "rotulo": "Nenhum", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q13",
+      "tema": "Pessoas",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "condicao": { "campo": "P03_pessoas", "diferente": "1" },
+      "texto": "Como funciona o acesso aos sistemas e arquivos da empresa?",
+      "ajuda": "Acesso é poder entrar e mexer: no sistema, nas planilhas, no e-mail ou no aplicativo do banco.",
+      "opcoes": [
+        { "valor": "so_o_necessario", "rotulo": "Cada pessoa acessa só o que precisa", "pontos": 2 },
+        { "valor": "so_o_dono", "rotulo": "Só o dono acessa", "pontos": 1 },
+        { "valor": "todos_tudo", "rotulo": "Todos acessam tudo", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q14",
+      "tema": "Pessoas",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "condicao": { "campo": "P03_pessoas", "diferente": "1" },
+      "texto": "Quando alguém sai da empresa, os acessos dessa pessoa (senhas, contas, grupos) são cancelados logo?",
+      "ajuda": "Logo quer dizer no mesmo dia ou no dia seguinte. Inclui trocar senhas que eram compartilhadas.",
+      "opcoes": [
+        { "valor": "sempre", "rotulo": "Sim, sempre", "pontos": 2 },
+        { "valor": "as_vezes", "rotulo": "Às vezes, ou demora", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não", "pontos": 0 },
+        { "valor": "nao_se_aplica", "rotulo": "Nunca saiu ninguém" },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    },
+    {
+      "id": "M2_Q15",
+      "tema": "Pessoas",
+      "tipo": "escolha_unica",
+      "obrigatoria": true,
+      "texto": "Você e a equipe sabem reconhecer uma mensagem ou cobrança suspeita e a quem avisar quando algo dá errado?",
+      "ajuda": "Exemplos: pedido de Pix urgente de um \"fornecedor\", link estranho, alguém pedindo código do WhatsApp.",
+      "opcoes": [
+        { "valor": "sim_combinado", "rotulo": "Sim, já conversamos e está combinado", "pontos": 2 },
+        { "valor": "mais_ou_menos", "rotulo": "Mais ou menos", "pontos": 1 },
+        { "valor": "nao", "rotulo": "Não", "pontos": 0 },
+        { "valor": "nao_sei", "rotulo": "Não sei", "pontos": 0 }
+      ]
+    }
+  ]
+}

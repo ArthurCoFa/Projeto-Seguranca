@@ -1,0 +1,26 @@
+{
+  "id": "m2-riscos",
+  "nome": "Avaliação de Riscos",
+  "grupo": "G2",
+  "versao": "0.1.0",
+  "porta": 3002,
+  "objetivo": "Ajudar o dono a enxergar o que pode dar errado no negócio, o tamanho de cada problema e por onde começar.",
+  "temas": [
+    "Ativos e dependências",
+    "Ameaças e controles",
+    "Continuidade",
+    "Pessoas"
+  ],
+  "artefatos": [
+    {
+      "id": "matriz-riscos",
+      "titulo": "Matriz de riscos (probabilidade × impacto)",
+      "descricao": "Tabela 3×3 em semáforo montada pelo código a partir de um catálogo fixo de riscos; a IA só explica cada risco."
+    },
+    {
+      "id": "plano-tratamento",
+      "titulo": "Plano de tratamento dos 5 riscos principais",
+      "descricao": "Para cada risco: ação, estratégia (mitigar, transferir, evitar ou aceitar), esforço, custo estimado e prazo."
+    }
+  ]
+}
